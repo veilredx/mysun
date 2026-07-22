@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>С Днём Рождения, Солнце ☀️</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Press+Start+2P&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ========================================================
+       ВСТУПИТЕЛЬНАЯ ЗАСТАВКА (Digital Rain / Countdown / Intro)
+  ========================================================= -->
+  <section id="intro" class="intro">
+    <canvas id="rain-canvas"></canvas>
+
+    <div class="intro-content">
+      <div id="countdown" class="countdown"></div>
+      <div id="intro-words" class="intro-words"></div>
+      <canvas id="heart-canvas" class="heart-canvas"></canvas>
+    </div>
+  </section>
+
+  <!-- ========================================================
+       ОСНОВНОЙ САЙТ
+  ========================================================= -->
+  <main id="main-site" class="main-site" aria-hidden="true">
+
+    <!-- ГЛАВНЫЙ ЭКРАН -->
+    <section class="screen hero-screen">
+      <div class="glow-orb"></div>
+      <p class="eyebrow">☀️</p>
+      <h1 class="hero-title">Солнце...</h1>
+      <p class="hero-subtitle">У меня есть кое-что для тебя.</p>
+      <button id="open-btn" class="btn-primary">
+        <span>Открыть</span> <span class="heart-icon">❤️</span>
+      </button>
+    </section>
+
+    <!-- ПОЗДРАВЛЕНИЕ -->
+    <section class="screen greeting-screen">
+      <h2 class="section-title reveal">
+        С Днём Рождения,<br /><span class="accent">Солнце ☀️</span>
+      </h2>
+
+      <div class="greeting-text">
+        <p class="reveal">Сегодня хочется пожелать тебе самого главного — быть счастливой.</p>
+        <p class="reveal">Чтобы каждый новый день приносил улыбку, тепло и людей, рядом с которыми спокойно.</p>
+        <p class="reveal">Пусть исполняются даже самые маленькие мечты, а впереди будет ещё много моментов, которые захочется вспоминать.</p>
+        <p class="reveal">Спасибо, что ты есть.</p>
+        <p class="reveal">Ты делаешь этот мир красивее просто своим существованием.</p>
+      </div>
+    </section>
+
+    <!-- ГАЛЕРЕЯ -->
+    <section class="screen gallery-screen">
+      <h2 class="section-title reveal">Моменты</h2>
+      <div class="gallery-grid">
+        <figure class="gallery-item reveal"><img src="images/photo1.jpg" alt="Момент 1" loading="lazy" /></figure>
+        <figure class="gallery-item reveal"><img src="images/photo2.jpg" alt="Момент 2" loading="lazy" /></figure>
+        <figure class="gallery-item reveal"><img src="images/photo3.jpg" alt="Момент 3" loading="lazy" /></figure>
+        <figure class="gallery-item reveal"><img src="images/photo4.jpg" alt="Момент 4" loading="lazy" /></figure>
+        <figure class="gallery-item reveal"><img src="images/photo5.jpg" alt="Момент 5" loading="lazy" /></figure>
+        <figure class="gallery-item reveal"><img src="images/photo6.jpg" alt="Момент 6" loading="lazy" /></figure>
+      </div>
+    </section>
+
+    <!-- ПОЧЕМУ ИМЕННО ТЫ -->
+    <section class="screen why-screen">
+      <h2 class="section-title reveal">Почему именно ты</h2>
+      <div class="why-card reveal">
+        <p id="why-text" class="why-text"></p>
+      </div>
+    </section>
+
+    <!-- ПИСЬМО -->
+    <section class="screen letter-screen">
+      <h2 class="section-title reveal">Тебе письмо</h2>
+
+      <div id="envelope" class="envelope reveal" role="button" tabindex="0" aria-label="Открыть письмо">
+        <div class="envelope-flap"></div>
+        <div class="envelope-body">
+          <div class="envelope-seal">❤</div>
+        </div>
+        <div class="envelope-letter">
+          <p>Солнце.</p>
+          <p>
+            Возможно, не всегда получается подобрать правильные слова, но сегодня мне хочется
+            сказать спасибо за то, что ты есть в моей жизни.
+          </p>
+          <p>
+            Пусть этот день подарит тебе много счастливых моментов, а впереди будет ещё больше
+            поводов улыбаться.
+          </p>
+          <p class="letter-signature">С Днём Рождения ❤️</p>
+        </div>
+      </div>
+      <p class="envelope-hint reveal">нажми, чтобы открыть</p>
+    </section>
+
+  </main>
+
+  <!-- ========================================================
+       ФИНАЛЬНАЯ СЦЕНА
+  ========================================================= -->
+  <section id="finale" class="finale">
+    <canvas id="hearts-canvas"></canvas>
+    <div class="finale-content">
+      <h2 class="finale-title">Ты — моё Солнце ☀️</h2>
+      <p class="finale-subtitle">С Днём Рождения ❤️</p>
+    </div>
+  </section>
+
+  <!-- ========================================================
+       МУЗЫКАЛЬНЫЙ ПЛЕЕР
+  ========================================================= -->
+  <button id="music-btn" class="music-btn" aria-label="Включить музыку">
+    <span class="music-note">♪</span>
+  </button>
+  <audio id="bg-audio" src="music/song.mp3" loop preload="none"></audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
